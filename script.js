@@ -4,6 +4,12 @@ const createElements = (arr) => {
     return (htmlElements.json(''));
 };
 
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN'; // English
+    window.speechSynthesis.speak(utterance);
+}
+
 const manageSpinner = (status) => {
     if (status == true) {
         document.getElementById('spinner').classList.remove('hidden');
@@ -45,14 +51,6 @@ const loadWordDetail = async(id) => {
     const details = await res.json();
     displayWordDetails(details.data);
 };
-
-/* {
-    "id": 78,
-    "level": 1,
-    "word": "Hot",
-    "meaning": "গরম",
-    "pronunciation": "হট"
-} */
 
 const displayWordDetails = (word) => {
     console.log(word)
@@ -105,7 +103,7 @@ const displayLevelWord = (words) => {
             <div class="font-bangla text-[32px] font-semibold">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "pronunciation পাওয়া যায়নি"}"</div>
             <div class="flex items-center justify-between text-center px-[47px] py-[36px]">
               <button onclick="loadWordDetail(${word.id})" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80] py-6 px-4 rounded-xl text-[24px]"><i class="fa-solid fa-circle-info"></i></button>
-              <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80] py-6 px-4 rounded-xl text-[24px]"><i class="fa-solid fa-volume-high"></i></button>
+              <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80] py-6 px-4 rounded-xl text-[24px]"><i class="fa-solid fa-volume-high"></i></button>
             </div>
         </div>`;
         wordContainer.append(card);
