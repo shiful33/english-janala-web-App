@@ -83,7 +83,7 @@
     </section>
 
     <!-- Lesson section start here-->
-     <section class="grid items-center justify-center text-center mt-[225px]">
+     <section class="grid items-center justify-center text-center mt-[125px]">
          <div>
             <h2 class="text-[36px] font-bold mb-[35px]"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
          </div>
@@ -91,6 +91,7 @@
          <div id="level-container" class="flex-wrap justify-center gap-5 md:flex"></div>
      </section>
 
+     <!-- Search Box section start here-->
      <section class="flex items-center justify-center mx-auto mt-[50px]">
     <div class="join">
     <div>
@@ -114,8 +115,7 @@
          </div>
      </section>
 
-     <!-- Open the modal using ID.showModal() method -->
-     <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <!-- Modal Section start here -->
       <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
         <div id="details-container" class="">
@@ -130,17 +130,64 @@
     </div>
   </dialog>
 
-  <!-- Subscribe section start here -->
+  <!-- Asked Questions section start here -->
   <section>
-    <div class="flex items-center justify-center text-center my-[50px]">
+    <div class="flex items-center justify-center text-center mt-[100px] mb-[50px]">
       <h2 class="text-[24px] text-[#131313]  font-semibold mb-[32px]"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h2>
     </div>
-    <div class="w-11/12 mx-auto">
-      <h4 class="bg-gray-100 p-4 text-[16px] font-medium rounded-[8px] shadow-sm mb-4 flex justify-between ">1. How can I start learning English on this website? <span class="cursor-pointer">+</span></h4>
-      <h4 class="bg-gray-100 p-4 text-[16px] font-medium rounded-[8px] shadow-sm mb-4 flex justify-between ">2. Is this website free to use? <span class="cursor-pointer">+</span></h4>
-      <h4 class="bg-gray-100 p-4 text-[16px] font-medium rounded-[8px] shadow-sm mb-4 flex justify-between ">3. Do I need to create an account? <span class="cursor-pointer">+</span></h4>
-      <h4 class="bg-gray-100 p-4 text-[16px] font-medium rounded-[8px] shadow-sm mb-4 flex justify-between ">4. How can I build my English vocabulary? <span class="cursor-pointer">+</span></h4>
-      <h5 class="bg-gray-100 p-4 text-[16px] font-medium rounded-[8px] shadow-sm mb-4 flex justify-between ">5. Do you offer certificates for completed courses? <span class="cursor-pointer">+</span></h5>
+    <!-- Asked Questions - 01 -->
+    <div class="w-11/12 p-10 mx-auto mb-3 overflow-hidden border border-gray-200 faq-item rounded-xl">
+      <button class="flex items-center justify-between w-full px-4 py-3 mb-3 text-left border border-gray-200 faq-question bg-gray-50 hover:bg-gray-100 rounded-xl">
+        <span>1. How can I start learning English on this website?</span>
+        <span class="text-xl cursor-pointer icon">+</span>
+      </button>
+      <div class="hidden px-4 pb-4 text-gray-600 faq-answer">
+        You can start by exploring our beginner lessons, interactive exercises, and quizzes. 
+        We also offer structured courses to guide you step by step.
+      </div>
+
+      <!-- Asked Questions - 02 -->
+      <div class="mb-3 overflow-hidden border border-gray-200 faq-item rounded-xl">
+      <button class="flex items-center justify-between w-full px-4 py-3 text-left faq-question bg-gray-50 hover:bg-gray-100">
+        <span>2. Is this website free to use?</span>
+        <span class="text-xl icon">+</span>
+      </button>
+      <div class="hidden px-4 pb-4 text-gray-600 faq-answer">
+        Yes, our website offers many free resources. Some premium courses may require payment.
+      </div>
+    </div>
+
+    <!-- Asked Questions - 03 -->
+    <div class="mb-3 overflow-hidden border border-gray-200 faq-item rounded-xl">
+      <button class="flex items-center justify-between w-full px-4 py-3 text-left faq-question bg-gray-50 hover:bg-gray-100">
+        <span>3. Do I need to create an account?</span>
+        <span class="text-xl icon">+</span>
+      </button>
+      <div class="hidden px-4 pb-4 text-gray-600 faq-answer">
+        You can explore without an account, but creating one lets you track progress and access more features.
+      </div>
+    </div>
+
+    <!-- Asked Questions - 04 -->
+    <div class="mb-3 overflow-hidden border border-gray-200 faq-item rounded-xl">
+      <button class="flex items-center justify-between w-full px-4 py-3 text-left faq-question bg-gray-50 hover:bg-gray-100">
+        <span>4. How can I build my English vocabulary?</span>
+        <span class="text-xl icon">+</span>
+      </button>
+      <div class="hidden px-4 pb-4 text-gray-600 faq-answer">
+        Practice with our flashcards, word lists, and vocabulary games to build your knowledge step by step.
+      </div>
+    </div>
+
+    <!-- Asked Questions - 05 -->
+    <div class="mb-3 overflow-hidden border border-gray-200 faq-item rounded-xl">
+      <button class="flex items-center justify-between w-full px-4 py-3 text-left faq-question bg-gray-50 hover:bg-gray-100">
+        <span>5. Do you offer certificates for completed courses?</span>
+        <span class="text-xl icon">+</span>
+      </button>
+      <div class="hidden px-4 pb-4 text-gray-600 faq-answer">
+        Yes, we provide digital certificates after successfully completing certain structured courses.
+      </div>
     </div>
   </section>
 

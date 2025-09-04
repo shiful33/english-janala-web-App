@@ -143,3 +143,29 @@ document.getElementById('btn-search')
         displayLevelWord(filterWords);
     })
 })
+
+const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const icon = q.querySelector('.icon');
+
+        // Close all
+        questions.forEach(item => {
+          item.classList.remove('bg-white');
+          item.nextElementSibling.classList.add('hidden');
+          item.querySelector('.icon').textContent = '+';
+        });
+
+        // Toggle clicked
+        if (answer.classList.contains('hidden')) {
+          answer.classList.remove('hidden');
+          q.classList.add('bg-white');
+          icon.textContent = '-';
+        } else {
+          answer.classList.add('hidden');
+          icon.textContent = '+';
+        }
+      });
+    });
